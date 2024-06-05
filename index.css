@@ -1,0 +1,355 @@
+* {
+    font-family: "Radiance", "Noto Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+h1, h2, h3, h4, p, a {
+    letter-spacing: 2px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.item a, .login a, .lan_dropdown h4 {
+    opacity: 0.8;
+}
+
+.item a:hover, .login a:hover {
+    opacity: 1;
+}
+
+.navbar {
+    top: 0;
+    position: fixed;
+    z-index: 9999;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin:0;
+}
+
+.left_section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 40px;
+}
+
+.main_options {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.item {
+    font-size: 18px;
+    font-family: "Reaver", serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+    margin: 0 20px;
+    text-transform: uppercase;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.item a {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+    color: #fff;
+    font-family: "OPTIwtcGoudy-Bold";
+}
+
+.item:hover {
+    opacity: 1;
+}
+
+.game .item {
+    border: 2px solid transparent;
+    transition-duration: 0.2s;
+    padding: 12px 20px;
+}
+
+.game_dropdown_content {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(244, 244, 244, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    margin-top: -2px;
+    display: none;
+    position: absolute;
+}
+
+.game:hover .item {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(244, 244, 244, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.game:hover .game_dropdown_content {
+    display: flex;
+}
+
+.right_section {
+    display: flex;
+    align-items: center;
+}
+
+.side_options {
+    display: flex;
+    align-items: flex-end; 
+    flex-direction: column;
+}
+
+.login a {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: "OPTIwtcGoudy-Bold";
+}
+
+.login, .lan {
+    display: flex;
+}
+
+.lan {
+    cursor: pointer;
+    position: relative;
+}
+
+.steam_button {
+    margin-left: auto;
+}
+
+.header_logo {
+    display: block;
+    width: 200px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    background-image: url('images/dota2_logo_horiz.png');
+}
+
+@media screen and (max-width: 767px) {
+    .header_logo {
+        background-image: url('images/dota2_logo_symbol.png');
+    }
+}
+
+.header_logo:hover {
+    opacity: 1;
+}
+
+.lan_dropdown {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.lan_icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    opacity: 0.8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/language.svg');
+}
+
+.lan_dropdown span {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ffffff90;
+}
+
+#arrow_over {
+    width: 10px;
+    height: 6px;
+    opacity: 0.9;
+    margin-left: 5px;
+}
+
+.lan_dropdown_content {
+    z-index: 9999;
+    padding: 12px 0;
+    border: 1px solid #888;
+    background-color: #222;
+    width: 310px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    transition-duration: 0.3s;
+    text-align: left;
+    top: calc(100% + 10px); 
+    left: 0;
+}
+
+.lan:hover .lan_dropdown_content {
+    display: flex;
+}
+
+.steam {
+    margin: 10px 0 10px 20px;
+    border: 3px solid #ffffff50;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition-duration: 0.2s;
+}
+
+.svg_steam {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg');
+}
+
+.h1_steam {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: top ease 0.5s;
+    opacity: 1;
+}
+
+.steam:hover {
+    border-color: red;
+    transform: translate(0, -3px);
+}
+
+.container {
+    margin-top:100px;
+    margin-right: 50%;
+    margin-left: 10%;
+    z-index: 100;
+}
+
+.container h1 {
+    margin: 0;
+    font-size: 60px;
+    line-height: 113%;
+    font-family: "Reaver", serif;
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: #ffffffee;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px #000;
+}
+
+.container span {
+    font-size: 16px;
+    font-family: "Radiance", sans-serif;
+    letter-spacing: 2px;
+    color: #ffffff90;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.divider {
+    margin-top: 20px;
+    width: 80px;
+    height: 3px;
+    min-height: 3px;
+    background-color: #ff6046;
+    border-radius: 1px;
+}
+
+.steam-container {
+    margin-top: 20px;
+    border: 3px solid #ffffff50;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition-duration: 0.2s;
+}
+
+.steam-container .svg_steam {
+    width: 30px;
+    height: 30px;
+}
+
+.steam-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.steam-text h4 {
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "OPTIwtcGoudy-Bold";
+}
+
+.steam-text span {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.video_out {
+    width: 100%;
+    height: 75vh;
+    margin-bottom: -90px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    z-index: -6;
+}
+
+.video_in {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+video {
+    height: 100%;
+    object-fit: cover;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    z-index: -4;
+}
